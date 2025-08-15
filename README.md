@@ -1,6 +1,6 @@
 ## Hello!
 
-This is a space where I learn, toy around, and host a couple of repositories.
+This is a space where I learn, toy around, and host a couple of repositories. Right now, it's basically just HTML.
 
 Coding stats:
 
