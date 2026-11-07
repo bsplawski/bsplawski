@@ -1,0 +1,72 @@
+/* Reset basic margins */
+body {
+  margin: 0;
+  font-family: 'Martian Mono', sans-serif;
+  background-color: #fff;
+  font-weight: 100;
+}
+
+/* 1. Setup the Grid Layout Container */
+.layout-container {
+  display: grid;
+  grid-template-columns: 200px 1fr; /* Sidebar width, then remaining space */
+  min-height: 200vh;
+}
+
+/* 2. Style and Freeze the Left Sidebar */
+.sidebar {
+  background-color: transparent;
+  color: #fff;
+  padding: 20px;
+  
+  /* Make the sidebar sticky */
+  position: sticky;
+  top: 0;
+  height: 100vh; /* Lock its height to the viewport */
+  box-sizing: border-box;
+}
+
+.sidebar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: black;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.nav-item {
+  color: black;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.nav-item:hover {
+  background-color: transparent;
+  color:#42aa3e;
+}
+
+/* 3. Style Main Content Area */
+.main-content {
+  padding: 10px;
+  background-color: #fff;
+}
+
+/* 4. Make it Responsive (Mobile Friendly) */
+@media (max-width: 768px) {
+  .layout-container {
+    grid-template-columns: 1fr; /* Stack them vertically on small screens */
+  }
+  
+  .sidebar {
+    position: static; /* Unfreeze sidebar on mobile */
+    height: auto;
+  }
+}
+
